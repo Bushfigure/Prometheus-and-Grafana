@@ -1,0 +1,6 @@
+*.yml linguist-language=YAML
+*.yaml linguist-language=YAML
+*.ini linguist-language=INI
+*.service linguist-language=Shell
+*.example linguist-language=Shell
+README.md linguist-documentation
