@@ -2,7 +2,7 @@
 
 A production-grade monitoring solution using Prometheus for metrics collection and Grafana for visualization. I built this project to gain hands-on experience with system observability, alerting, and infrastructure monitoring — essential skills for DevOps and Site Reliability Engineering.
 
-## 📊 Technologies
+## Technologies
 - **Prometheus** - Metrics collection and time-series database
 - **Grafana** - Data visualization and alerting
 - **Node Exporter** - System metrics exporter (CPU, memory, disk, network)
@@ -10,7 +10,7 @@ A production-grade monitoring solution using Prometheus for metrics collection a
 - **ngrok** - Public URL tunneling for remote access
 - **systemd** - Service management
 
-## ✨ Features
+## Features
 Here's what you can do with this monitoring system:
 - **Monitor System Metrics**: Track CPU usage, memory consumption, disk space, and network activity in real-time.
 - **Visualize Data**: View beautiful, customizable dashboards in Grafana with system overview and detailed metrics.
@@ -19,19 +19,19 @@ Here's what you can do with this monitoring system:
 - **Customize Monitoring**: Add more exporters for services like Nginx, MySQL, or Redis.
 - **Historical Analysis**: Query and analyze historical metrics using PromQL.
 
-## 🎨 Dashboards
+## Dashboards
 - **System Overview Dashboard**: Shows CPU, memory, disk, and network graphs.
 - **Node Exporter Full Dashboard (ID 1860)**: Comprehensive system monitoring with detailed metrics.
 - **Custom Panels**: Build your own panels using PromQL queries.
 
-## 🔧 Keyboard Shortcuts (PromQL Quick Reference)
+##  Keyboard Shortcuts (PromQL Quick Reference)
 Speed up your monitoring queries:
 - **CPU Usage**: `100 - (avg by (instance) (rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)`
 - **Memory Usage**: `(1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)) * 100`
 - **Disk Usage**: `100 - ((node_filesystem_avail_bytes{mountpoint="/"} * 100) / node_filesystem_size_bytes{mountpoint="/"})`
 - **Network Traffic**: `rate(node_network_receive_bytes_total[5m])`
 
-## 🚀 The Process
+##  The Process
 
 I started by installing Prometheus as the core metrics collection engine. This involved creating a dedicated system user, setting up directories, and configuring it as a systemd service for automatic startup.
 
@@ -45,7 +45,7 @@ Finally, I used ngrok to expose Grafana publicly so I could access it from anywh
 
 Throughout the process, I documented errors and their solutions — turning problems into learning opportunities.
 
-## 💡 What I Learned
+## What I Learned
 
 During this project, I gained practical skills in monitoring and observability that go beyond just installing tools.
 
@@ -73,7 +73,7 @@ During this project, I gained practical skills in monitoring and observability t
 - **Metrics vs Logs**: Understanding the difference between monitoring metrics (numbers) and logs (events) and how they complement each other.
 - **Service Discovery**: Learning how Prometheus discovers and scrapes targets.
 
-## 🔄 How Can It Be Improved?
+## How Can It Be Improved?
 
 - **Add More Exporters**: Integrate exporters for Nginx, MySQL, MongoDB, or Redis to monitor application-level services.
 - **Implement Recording Rules**: Pre-compute expensive queries to improve dashboard loading performance.
@@ -84,7 +84,7 @@ During this project, I gained practical skills in monitoring and observability t
 - **Custom Application Metrics**: Instrument custom applications with Prometheus client libraries.
 - **CI/CD Integration**: Automate the deployment of monitoring stack using Ansible or Terraform.
 
-## 🚦 Running the Project
+## Running the Project
 
 To set up the monitoring system in your local environment, follow these steps:
 
@@ -145,7 +145,7 @@ To set up the monitoring system in your local environment, follow these steps:
     ngrok http 3000
     ```
 
-## 🐛 Common Errors & Solutions
+## Common Errors & Solutions
 
 ### Error 1: `Failed to enable unit: Unit file prometheus.service does not exist`
 
@@ -189,7 +189,7 @@ To set up the monitoring system in your local environment, follow these steps:
 
 **Solution:** Run `ngrok config add-authtoken <YOUR_TOKEN>` (v3) or `ngrok authtoken <YOUR_TOKEN>` (v2).
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 Prometheus-and-Grafana/
@@ -209,7 +209,7 @@ Prometheus-and-Grafana/
     └── alert-email.png
 ```
 
-## 📚 References
+## References
 
 - [Prometheus Documentation](https://prometheus.io/docs/)
 - [Grafana Documentation](https://grafana.com/docs/)
@@ -218,15 +218,16 @@ Prometheus-and-Grafana/
 - [Alertmanager](https://prometheus.io/docs/alerting/latest/alertmanager/)
 - [ngrok Documentation](https://ngrok.com/docs)
 
-## 👤 Author
+## Author
 
 **Samuel Olumide Aransiola**
 - GitHub: [@Bushfigure](https://github.com/Bushfigure)
 
-## 📄 License
+## License
 
 This project is open source and available under the MIT License.
 
+https://roadmap.sh/projects/monitoring
 ---
 
 ⭐️ If you found this project helpful, please give it a star on GitHub!
